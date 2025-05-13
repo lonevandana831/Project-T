@@ -1,31 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <link rel="stylesheet" href="T.CSS">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="T.CSS"/>
 </head>
 <body>
-    <div class="container1">
-        <h1>Expense Tracker</h1>
-        <p>Available Balance </p>
-        <h1>&#8377;0.00</h1>
-        <div class="span">
-            <div class="container2">
-              <span class="space">INCOME</span>
-              <span class="space1">EXPENSE</SPan>
-            </div>
-           <div class="container3">
-             <span class="space">&#8377;0.00</span>
-             <span class="space1">&#8377;0.00</span>
-            </div>
-        </div>
-            <div class="butnn">
-                <button class="butn">Add</button>
-            </div>
-         
-  
+
+  <div class="main-container">
+    <h1>Expense Tracker</h1>
+
+    <div class="balance-section">
+      <p><strong>Available Balance</strong></p>
+      <h2>&#8377;0.00</h2>
     </div>
+
+    <div class="summary-box">
+      <div class="row">
+        <span><strong>INCOME</strong></span>
+        <span><strong>EXPENSE</strong></span>
+      </div>
+      <div class="row">
+        <span>&#8377;0.00</span>
+        <span>&#8377;0.00</span>
+      </div>
+    </div>
+
+    <div class="butnn">
+      <button class="butn">Add</button>
+    </div>
+
+    <h2>Transactions</h2>
+    <input type="text" class="search-bar" placeholder="Search...">
+
+    <div class="transactions-list">
+      <div class="transaction">
+        <span><b>Birthday Gifts</b></span>
+        <span><b>₹500</b></span>
+        <button class="delete-btn">Remove</button>
+      </div>
+
+      <div class="transaction">
+        <span><b>Pocket Money</b></span>
+        <span><b>₹1750</b></span>
+        <button class="delete-btn">Remove</button>
+      </div>
+
+      <div class="transaction">
+        <span><b>Gifts Amount</b></span>
+        <span><b>₹2000</b></span>
+        <button class="delete-btn">Remove</button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
