@@ -7,9 +7,8 @@
   <link rel="stylesheet" href="T.CSS"/>
 </head>
 <body>
-
   <div class="main-container">
-    <h1>Expense Tracker</h1>
+    <h1 class="heading">Expense Tracker</h1>
 
     <div class="balance-section">
       <p><strong>Available Balance</strong></p>
@@ -27,33 +26,43 @@
       </div>
     </div>
 
-    <div class="butnn">
-      <button class="butn">Add</button>
-    </div>
+    <button class="button" id="button" onclick="pop()">Add</button>
 
-    <h2>Transactions</h2>
+    <h2 class="heading">Transactions</h2>
     <input type="text" class="search-bar" placeholder="Search...">
 
     <div class="transactions-list">
       <div class="transaction">
         <span><b>Birthday Gifts</b></span>
         <span><b>₹500</b></span>
-        <button class="delete-btn">Remove</button>
+        <button class="button">Remove</button>
       </div>
-
       <div class="transaction">
         <span><b>Pocket Money</b></span>
         <span><b>₹1750</b></span>
-        <button class="delete-btn">Remove</button>
+        <button class="button">Remove</button>
       </div>
-
       <div class="transaction">
         <span><b>Gifts Amount</b></span>
         <span><b>₹2000</b></span>
-        <button class="delete-btn">Remove</button>
+        <button class="button">Remove</button>
       </div>
     </div>
   </div>
 
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <span class="close-btn" onclick="closep()">&times;</span>
+    <h2 class="heading">Add New Transaction</h2>
+    <div class="form">
+      <label for="text">Text</label>
+      <input type="text" id="text" placeholder="Enter Name" required>
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" placeholder="Enter Amount" required>
+      <button class="button">Submit</button>
+    </div>
+  </div>
+
+  <script src="T.js"></script>
 </body>
 </html>
