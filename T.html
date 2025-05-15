@@ -12,7 +12,7 @@
 
     <div class="balance-section">
       <p><strong>Available Balance</strong></p>
-      <h2>&#8377;0.00</h2>
+      <h2 id = "balance">&#8377;0.00</h2>
     </div>
 
     <div class="summary-box">
@@ -21,46 +21,47 @@
         <span><strong>EXPENSE</strong></span>
       </div>
       <div class="row">
-        <span>&#8377;0.00</span>
-        <span>&#8377;0.00</span>
+        <span id="money-plus" class="money-plus">
+            +&#8377;0.00
+        </span>
+        <span id="money-minus" class="money-minus">
+            -&#8377;0.00
+        </span>
       </div>
     </div>
 
-    <button class="button" id="button" onclick="pop()">Add</button>
-
+    
     <h2 class="heading">Transactions</h2>
+    <div class = "style" >
     <input type="text" class="search-bar" placeholder="Search...">
+    <button class="button" id="button" onclick="pop()">Add</button>
+    </div>
 
     <div class="transactions-list">
-      <div class="transaction">
-        <span><b>Birthday Gifts</b></span>
-        <span><b>₹500</b></span>
-        <button class="button">Remove</button>
-      </div>
-      <div class="transaction">
-        <span><b>Pocket Money</b></span>
-        <span><b>₹1750</b></span>
-        <button class="button">Remove</button>
-      </div>
-      <div class="transaction">
-        <span><b>Gifts Amount</b></span>
-        <span><b>₹2000</b></span>
-        <button class="button">Remove</button>
-      </div>
+      <ul id = "list"  class ="list" >
+          <button class = "delete-btn">Remove</button>
+        </li>
+      </ul>
     </div>
+
   </div>
 
   <!-- Popup -->
   <div class="popup" id="popup">
     <span class="close-btn" onclick="closep()">&times;</span>
     <h2 class="heading">Add New Transaction</h2>
-    <div class="form">
+    <form id="form">
+      <div class="form-control">
       <label for="text">Text</label>
       <input type="text" id="text" placeholder="Enter Name" required>
-      <label for="amount">Amount</label>
+      </div>
+
+      <div class = "form-control">
+      <label for="amount">Amount </label>
       <input type="number" id="amount" placeholder="Enter Amount" required>
-      <button class="button">Submit</button>
-    </div>
+      <button class="button" type = "submit">Submit</button>
+      </div>
+    </form>
   </div>
 
   <script src="T.js"></script>
