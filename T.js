@@ -120,6 +120,15 @@ const balance = document.getElementById(
   Init();
   
   form.addEventListener('submit',addTransaction);
-
-  function updateValues() {
-  const amounts = transactions.map(transaction => transaction.amount);}
+// search bar
+document.getElementById("search-bar").addEventListener("input",function(search){
+  const bar =search.target.value.toLowerCase().trim()
+  list.innerHTML=""
+  // filtering transacton by list
+  const filter=transactions.filter(transactions=>
+    transactions.text.toLowerCase().includes(bar)
+  )
+  //filter results
+  filter.forEach(addTransactionDOM)
+})
+  
