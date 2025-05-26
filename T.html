@@ -4,73 +4,87 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Expense Tracker</title>
-  <link rel="stylesheet" href="T.CSS"/>
+  <link rel="stylesheet" href="T.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <div class="main-container">
-    <h1 class="heading">Expense Tracker</h1>
+  <div class="layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="header"><h2> Menu</h2></div>
 
-    <div class="balance-section">
-      <p><strong>Available Balance</strong></p>
-      <h2 id = "balance">&#8377;0.00</h2>
-    </div>
+      <div class="icons">
+        <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="#montly-transactions" id="#montly-transactions"> &#128467; Monthly Transactions</a>
+        <a href="#trends">&#128202; Monthly Trends</a>
 
-    <div class="summary-box">
-      <div class="row">
-        <span><strong>INCOME</strong></span>
-        <span><strong>EXPENSE</strong></span>
       </div>
-      <div class="row">
-        <span id="money-plus" class="money-plus">
-            +&#8377;0.00
-        </span>
-        <span id="money-minus" class="money-minus">
-            -&#8377;0.00
-        </span>
-      </div>
-    </div>
-
     
-    <h2 class="heading">Transactions</h2>
-    <div class = "style" >
-    <input type="text" id="search-bar" class="search-bar" placeholder="Search...">
-    <button class="button" id="button" onclick="pop()">Add</button>
+
     </div>
 
-    <div class="transactions-list">
-      <ul id = "list"  class ="list" >
-          <button class = "delete-btn">Remove</button>
-        </li>
-      </ul>
-    </div>
+    <!-- Main Content -->
+    <div class="main-container">
+      <h1 class="heading">Expense Tracker</h1>
 
+      <div class="balance-section">
+        <h2>Available Balance</h2>
+        <h2 id="balance">&#8377;0.00</h2>
+      </div>
+
+      <div class="summary-box">
+        <div class="row">
+          <span><strong>INCOME</strong></span>
+          <span><strong>EXPENSE</strong></span>
+        </div>
+        <div class="row">
+          <span id="money-plus" class="money-plus">+&#8377;0.00</span>
+          <span id="money-minus" class="money-minus">-&#8377;0.00</span>
+        </div>
+      </div>
+
+      <h2 class="heading">Transactions</h2>
+      <div class="style">
+        <input type="text" id="search-bar" class="search-bar" placeholder="Search...">
+        <button class="button" id="button" onclick="pop()">Add Expense</button>
+      </div>
+
+      <div class="transactions-list">
+        <ul id="list" class="list"></ul>
+      </div>
+    </div>
   </div>
 
   <!-- Popup -->
   <div class="popup" id="popup">
     <span class="close-btn" onclick="closep()">&times;</span>
-    <h2 class="heading">Add New Transaction</h2>
+    <h2 class="heading" id="popup-title">Add New Transaction</h2>
     <form id="form">
       <div class="form-control">
-      <label for="text">Text</label>
-      <input type="text" id="text" placeholder="Enter Name" required>
+        <label for="text">Text</label>
+        <input type="text" id="text" placeholder="Enter Name" required>
       </div>
 
-      <div class = "form-control">
-      <label for="amount">Amount </label>
-      <input type="number" id="amount" placeholder="Enter Amount" required>
+      <div class="form-control">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" placeholder="Enter Amount" required>
       </div>
 
-      <div class = "form-control">
-      <label for = "Date-input">Date</label>
-      <input type = "Date" id = "Date-input" placeholder="dd/mm/yyyy" required>
+      <div class="form-control">
+        <label for="Date-input">Date</label>
+        <input type="date" id="Date-input" required>
       </div>
-    
-      <div class = "form-control">
-      <button class="button" type = "submit">Submit</button>
+
+      <input type="hidden" id="edit-id">
+      <div class="form-control">
+        <button class="button" type="submit">Submit</button>
       </div>
     </form>
   </div>
+
+<!Monthly Transaction>
+<div clas="montly-transactions"></div>
+
 
   <script src="T.js"></script>
 </body>
